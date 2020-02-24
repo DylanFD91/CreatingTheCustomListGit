@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CreatingTheCustomList;
 
-namespace TestTheCustomList
+namespace RemoveUnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class RemoveUnitTesting
     {
         [TestMethod]
         public void TestMethod1()
