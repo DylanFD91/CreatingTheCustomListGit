@@ -44,7 +44,7 @@ namespace RemoveUnitTests
             myList.Remove(value2);
 
             //Assert
-            Assert.AreEqual(expected, myList[2]);
+            Assert.AreEqual(expected, myList[1]);
         }
         [TestMethod]
         public void Remove_RemovingAnObjectExpandedArray_RemovingAnObjectInAExpandedArray()
@@ -71,7 +71,7 @@ namespace RemoveUnitTests
             myList.Remove(value5);
 
             //Assert
-            Assert.AreEqual(expected, myList[4]);
+            Assert.AreEqual(expected, 6);
         }
         [TestMethod]
         public void Remove_RemoveAnObjectNotInArray_TryingToRemoveAnObjectThatDoesntExistShouldThrowException()

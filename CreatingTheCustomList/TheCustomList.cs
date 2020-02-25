@@ -8,8 +8,8 @@ namespace CreatingTheCustomList
 {
     public class TheCustomList<T>
     {
-        int capacity = 4;
-        public int count = 0;
+        private int capacity = 4;
+        private int count = 0;
         T[] Items;
 
         public T this[int i]//Indexer
@@ -47,7 +47,7 @@ namespace CreatingTheCustomList
         {
             T[] TempArray = new T[capacity *= 2];
 
-            for (int tempArrayIndex = 0; TempArray.Length < Items.Length; tempArrayIndex++)
+            for (int tempArrayIndex = 0; tempArrayIndex < count; tempArrayIndex++)
             {
                 TempArray[tempArrayIndex] = Items[tempArrayIndex];
             }
@@ -65,15 +65,34 @@ namespace CreatingTheCustomList
 
         public void Remove(T item)
         {
-            try
+            try//sets items to null
+            {
+                ListShifter(item);
+            }
+            catch (IndexOutOfRangeException ex)//throws exception if any object chosen isnt in the range
+            {
+                throw ex;
+            }
+        }
+        private void ListShifter(T item)
+        {
+            int j = 0;
+            T[] tempArray = new T[count];
+            for (int tempArrayIndex = 0; tempArrayIndex < capacity; tempArrayIndex++)
             {
 
+                if (Items[tempArrayIndex].Equals(item))//go through the index till i hit the passed item
+                {
+                    count--;
+                }
+                else//continue through the index
+                {
+                    //transfer content to temp array
+                    tempArray[j] = Items[tempArrayIndex];
+                    j++;
+                }
             }
-            catch (System.IndexOutOfRangeException ex)
-            {
-
-                throw;
-            }
+            Items = tempArray;
         }
     }
 }

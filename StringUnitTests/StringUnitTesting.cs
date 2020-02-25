@@ -7,7 +7,7 @@ namespace StringUnitTests
     [TestClass]
     public class StringUnitTesting
     {
-        [TestMethod]
+        /*[TestMethod]
         public void Testmethod1()
         {
             //Arrange
@@ -30,6 +30,6 @@ namespace StringUnitTests
 
             //Assert
             Assert.AreEqual(expected, myList.ToString());
-        }
+        }*/
     }
 }
