@@ -9,8 +9,21 @@ namespace CreatingTheCustomList
     public class TheCustomList<T>
     {
         int capacity = 4;
-        int count = 0;
+        public int count = 0;
         T[] Items;
+
+        public T this[int i]
+        {
+            get => Items[i];
+            set => Items[i] = value;
+        }
+
+
+        /*public int Count
+        {
+            get;
+        }*/
+
         public void Add(T item)
         {
             //increment count
@@ -18,9 +31,6 @@ namespace CreatingTheCustomList
 
             //item needs to land at next available index
             ListIndexIncrease();
-
-            //check to make sure it persists
-
 
             //count == maxcapacity, we need to increase capacity and copy
             ResizeArray();
@@ -30,17 +40,13 @@ namespace CreatingTheCustomList
         private void ResizeArray()
         {
             T[] TempArray = new T[capacity *= 2];
-            int tempArrayIndexCounter = 0;
-            int tempItemsIndexCounter = 0;
+
             for (int tempArrayIndex = 0; TempArray.Length < Items.Length; tempArrayIndex++)
             {
-                TempArray[tempArrayIndexCounter].Equals(Items[tempItemsIndexCounter]);
-                tempArrayIndexCounter++;
-                tempItemsIndexCounter++;
+                TempArray[tempArrayIndex] = Items[tempArrayIndex];
             }
             Items = TempArray;
         }
-
         private void AddItemToList(T item)
         {
             Items[count] = item;
@@ -49,5 +55,6 @@ namespace CreatingTheCustomList
         {
             count++;
         }
+
     }
 }
