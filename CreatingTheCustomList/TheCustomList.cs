@@ -12,32 +12,38 @@ namespace CreatingTheCustomList
         public int count = 0;
         T[] Items;
 
-        public T this[int i]
+        public T this[int i]//Indexer
         {
             get => Items[i];
             set => Items[i] = value;
         }
-
-
-        /*public int Count
+        public TheCustomList()//Builds a custom list
         {
-            get;
-        }*/
+            Items = new T[capacity];
+        }
+        public int Count//Gets the count and allows the index count to be acessed
+        {
+            get 
+            {
+                return count;
+            }
+        }
 
         public void Add(T item)
         {
+            //count == maxcapacity, we need to increase capacity and copy
+            if (Count == capacity)
+            {
+                ResizeArray();
+            }
             //increment count
             AddItemToList(item);
 
             //item needs to land at next available index
             ListIndexIncrease();
 
-            //count == maxcapacity, we need to increase capacity and copy
-            ResizeArray();
-
         }
-
-        private void ResizeArray()
+        private void ResizeArray()//Resizes array when capacity is reached
         {
             T[] TempArray = new T[capacity *= 2];
 
@@ -47,14 +53,27 @@ namespace CreatingTheCustomList
             }
             Items = TempArray;
         }
-        private void AddItemToList(T item)
+        private void AddItemToList(T item)//Adds an item to the list on the current count of index
         {
             Items[count] = item;
         }
-        private void ListIndexIncrease()
+        private void ListIndexIncrease()//increases the list index count after an item is added
         {
             count++;
         }
 
+
+        public void Remove(T item)
+        {
+            try
+            {
+
+            }
+            catch (System.IndexOutOfRangeException ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

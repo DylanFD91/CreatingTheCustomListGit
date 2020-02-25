@@ -18,7 +18,7 @@ namespace TestTheCustomList
             myList.Add(5);
 
             //Assert
-            Assert.AreEqual(expected, myList.count);
+            Assert.AreEqual(expected, myList.Count);
         }
         [TestMethod]
         public void Add_ExpectingAValue_ExpectingASpecificValueAddedToTheList()
@@ -87,7 +87,7 @@ namespace TestTheCustomList
 
 
             //Assert
-            Assert.AreEqual(expectedListCount, myList);
+            Assert.AreEqual(expectedListCount, myList[5]);
         }
     }
 }
