@@ -120,5 +120,31 @@ namespace SubtractionOverloadUnitTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void SubtractOverload_IndexCheck_MakingSureValuesAreAtProperIndex()
+        {
+            //Arrange
+            TheCustomList<int> myList = new TheCustomList<int>();
+            TheCustomList<int> myList2 = new TheCustomList<int>();
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+
+            int expected = 3;
+            int actual;
+
+            //Act
+            myList.Add(value1);
+            myList.Add(value2);
+            myList.Add(value3);
+            myList2.Add(value2);
+
+            TheCustomList<int> result = myList - myList2;
+
+            actual = result[2];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
