@@ -8,7 +8,7 @@ namespace PlusOverloadUnitTests
     public class PlusOverloadUnitTest
     {
         [TestMethod]
-        public void TestMethod1_CountTest_MakingSureTheCountIsIncreased()
+        public void PlusOverload_CountTest_MakingSureTheCountIsIncreased()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
@@ -39,7 +39,7 @@ namespace PlusOverloadUnitTests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void TestMethod2_FirstIndexChecker_MakingSureTheFirstIndexRemainsTheSame()
+        public void PlusOverload_FirstIndexChecker_MakingSureTheFirstIndexRemainsTheSame()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
@@ -64,7 +64,7 @@ namespace PlusOverloadUnitTests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void TestMethod3_LastIndexChecker_MakingSureTheLastIndexIsTheLastIndexFromTheSecondList()
+        public void PlusOverload_LastIndexChecker_MakingSureTheLastIndexIsTheLastIndexFromTheSecondList()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
@@ -89,7 +89,7 @@ namespace PlusOverloadUnitTests
 
         }
         [TestMethod]
-        public void TestMethod4_ReportOutValues_EachValueIsAtExpectedIndex()
+        public void PlusOverload_ReportOutValues_EachValueIsAtExpectedIndex()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
@@ -121,7 +121,7 @@ namespace PlusOverloadUnitTests
             Assert.AreEqual(expected3, actual3);
         }
         [TestMethod]
-        public void TestMethod5_CapacityOfNewList_CombinedListCapacityIncreasedAfterCombining()
+        public void PlusOverload_CapacityOfNewList_CombinedListCapacityIncreasedAfterCombining()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
