@@ -11,7 +11,6 @@ namespace CreatingTheCustomList
         private int capacity = 4;
         private int count = 0;
         T[] Items;
-
         public T this[int i]//Indexer
         {
             get => Items[i];
@@ -28,11 +27,20 @@ namespace CreatingTheCustomList
                 return count;
             }
         }
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+        }
+
+
 
         public void Add(T item)
         {
             //count == maxcapacity, we need to increase capacity and copy
-            if (Count == capacity)
+            if (Count == Capacity)
             {
                 ResizeArray();
             }
@@ -61,6 +69,7 @@ namespace CreatingTheCustomList
         {
             count++;
         }
+
 
 
         public void Remove(T item)
@@ -94,5 +103,26 @@ namespace CreatingTheCustomList
             }
             Items = tempArray;
         }
+
+
+
+
+        public override string ToString()
+        {
+            string stringReturn = "";
+            for (int i = 0; i < count; i++)
+            {
+                if (i == 0)
+                {
+                    stringReturn += Items[i];
+                }
+                else
+                {
+                    stringReturn += " " + Items[i];
+                }
+            }
+            return stringReturn;
+        }
+
     }
 }

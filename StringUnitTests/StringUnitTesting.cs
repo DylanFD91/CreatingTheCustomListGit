@@ -7,8 +7,8 @@ namespace StringUnitTests
     [TestClass]
     public class StringUnitTesting
     {
-        /*[TestMethod]
-        public void Testmethod1()
+        [TestMethod]
+        public void ToStringOverride_CreateAListOfIntsAndGetAString_TakesAListAndOutputsAllValuesAsAString()
         {
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
@@ -17,7 +17,8 @@ namespace StringUnitTests
             int value3 = 3;
             int value4 = 4;
             int value5 = 5;
-            string expected = "12345";
+            string expected = "1 2 3 4 5";
+            string actual = "";
 
             //Act
             myList.Add(value1);
@@ -26,10 +27,10 @@ namespace StringUnitTests
             myList.Add(value4);
             myList.Add(value5);
 
-            myList.ToString();
+            actual = myList.ToString();
 
             //Assert
-            Assert.AreEqual(expected, myList.ToString());
-        }*/
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
