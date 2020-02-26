@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveUnitTests", "RemoveUn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringUnitTests", "StringUnitTests\StringUnitTests.csproj", "{75427577-1227-41A1-B423-D99C5A6D0A06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlusOverloadUnitTests", "PlusOverloadUnitTests\PlusOverloadUnitTests.csproj", "{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{75427577-1227-41A1-B423-D99C5A6D0A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75427577-1227-41A1-B423-D99C5A6D0A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75427577-1227-41A1-B423-D99C5A6D0A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

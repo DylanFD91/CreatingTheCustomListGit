@@ -106,7 +106,6 @@ namespace CreatingTheCustomList
 
 
 
-
         public override string ToString()
         {
             string stringReturn = "";
@@ -123,6 +122,8 @@ namespace CreatingTheCustomList
             }
             return stringReturn;
         }
+
+
 
     }
 }

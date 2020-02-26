@@ -32,5 +32,28 @@ namespace StringUnitTests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ToStringOverride_CreateAListOfDoublesAndGetAString_TakesAListAndOutputsAllValuesAsAString()
+        {
+            //Arrange
+            TheCustomList<double> myList = new TheCustomList<double>();
+            double value1 = 1.1;
+            double value2 = 2.2;
+
+            string expected = "1.1 2.2";
+            string actual = "";
+
+            //Act
+            myList.Add(value1);
+            myList.Add(value2);
+
+            actual = myList.ToString();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
