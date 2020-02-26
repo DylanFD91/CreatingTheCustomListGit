@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C219E8A-8999-45A4-A81A-80AFDB4D7FB6}</ProjectGuid>
+    <ProjectGuid>{27FB895C-85AD-4A17-8533-9D363586B106}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlusOverloadUnitTests</RootNamespace>
-    <AssemblyName>PlusOverloadUnitTests</AssemblyName>
+    <RootNamespace>SubtractionOverloadUnitTests</RootNamespace>
+    <AssemblyName>SubtractionOverloadUnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlusOverloadUnitTest.cs" />
+    <Compile Include="SubtractOverloadUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreatingTheCustomList\CreatingTheCustomList.csproj">
-      <Project>{FEB926E9-21E9-42F4-B256-D7C6DECA46C2}</Project>
+      <Project>{feb926e9-21e9-42f4-b256-d7c6deca46c2}</Project>
       <Name>CreatingTheCustomList</Name>
     </ProjectReference>
   </ItemGroup>
