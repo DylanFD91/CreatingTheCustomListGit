@@ -156,11 +156,33 @@ namespace CreatingTheCustomList
         public TheCustomList<T> ListZipper(TheCustomList<T> list1, TheCustomList<T> list2)
         {
             TheCustomList<T> zippedList = new TheCustomList<T>();
-            int combinedListCount = list1.count + list2.count;
-            for (int i = 0; i < combinedListCount; i++)
+            if (list1.count >= list2.count)
             {
-                zippedList.Add(list1[i]);
-                zippedList.Add(list2[i]);
+                for (int i = 0; i < list1.count; i++)
+                {
+                    if (list1.count > i)
+                    {
+                        zippedList.Add(list1[i]);
+                    }
+                    if (list2.count > i)
+                    {
+                        zippedList.Add(list2[i]);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < list2.count; i++)
+                {
+                    if (list1.count > i)
+                    {
+                        zippedList.Add(list1[i]);
+                    }
+                    if (list2.count > i)
+                    {
+                        zippedList.Add(list2[i]);
+                    }
+                }
             }
             return zippedList;
         }
