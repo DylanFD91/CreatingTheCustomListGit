@@ -13,15 +13,20 @@ namespace RemoveUnitTests
             //Arrange
             TheCustomList<int> myList = new TheCustomList<int>();
             int value1 = 1;
-            int expected = 0;
+            int value2 = 2;
+
+            int expected = 1;
+            int actual;
 
             //Act
             myList.Add(value1);
+            myList.Add(value2);
 
-            myList.Remove(value1);
+            myList.Remove(value2);
+            actual = myList.Count;
 
             //Assert
-            Assert.AreEqual(expected, myList[0]);
+            Assert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void Remove_RemovingAnObjectAndSeeingIfItemsGetMovedUp_RemoveAnObjectAtSpecifiedIndexThenTheRestOfTheIndexShiftsUp()
@@ -71,7 +76,7 @@ namespace RemoveUnitTests
             myList.Remove(value5);
 
             //Assert
-            Assert.AreEqual(expected, 6);
+            Assert.AreEqual(expected, myList[4]);
         }
         [TestMethod]
         public void Remove_RemoveAnObjectNotInArray_TryingToRemoveAnObjectThatDoesntExistShouldThrowException()

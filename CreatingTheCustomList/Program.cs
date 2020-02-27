@@ -18,13 +18,7 @@ namespace CreatingTheCustomList
             numbers.Add(10);
 
 
-            /*(10 points): As a developer, I want to be able to overload the – operator, so that I can subtract 
-            one instance of a custom list class from another instance of a custom list class.
-            - List<int> one = new List<int>() {1,3,5}; and List<int> two = new List<int>() {2,1,6};
-            - List<int> result = one - two;
-            - result has 3,5
-
-            (5 points): As a developer, I want to write documentation in a .txt file that describes the details 
+            /*(5 points): As a developer, I want to write documentation in a .txt file that describes the details 
             and functionality of my – operator overload. I want to include details such as “syntax”, “parameters”, “return type”, 
             and an example of it being used, with the output. I want to use the following piece of documentation as a guideline 
             for my own documentation:
@@ -34,10 +28,6 @@ namespace CreatingTheCustomList
             - I have List<int> odd = new List<int>() {1,3,5}; and List<int> even = new List<int>() {2,4,6};
             - odd.Zip(even);
             - When lists odd and even are zipped together, your new list will contain values 1,2,3,4,5,6
-
-            (10 points): As a developer, I want the custom list class to be iterable.
-
-            (10 points): As a developer, I want to use C# best practices, SOLID design principles, and good naming conventions on the project.
 
             (Bonus 5 points): As a developer, I want the ability to sort an instance of my custom-built list class. 
             To be eligible for the bonus points, you may not use Array.Sort() that is already built in and you must tell 

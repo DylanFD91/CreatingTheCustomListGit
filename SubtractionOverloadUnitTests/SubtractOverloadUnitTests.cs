@@ -15,6 +15,7 @@ namespace SubtractionOverloadUnitTests
             TheCustomList<int> myList2 = new TheCustomList<int>();
             int value1 = 1;
             int value2 = 2;
+            int value3 = 3;
 
             int expected = 1;
             int actual;
@@ -22,6 +23,7 @@ namespace SubtractionOverloadUnitTests
             //Act
             myList.Add(value1);
             myList.Add(value2);
+            myList2.Add(value3);
             myList2.Add(value2);
 
             TheCustomList<int> result = myList - myList2;
@@ -141,7 +143,7 @@ namespace SubtractionOverloadUnitTests
 
             TheCustomList<int> result = myList - myList2;
 
-            actual = result[2];
+            actual = result[1];
 
             //Assert
             Assert.AreEqual(expected, actual);
