@@ -35,7 +35,6 @@ namespace CreatingTheCustomList
                 return capacity;
             }
         }
-
         public void Add(T item)
         {
             //count == maxcapacity, we need to increase capacity and copy
@@ -68,9 +67,6 @@ namespace CreatingTheCustomList
         {
             count++;
         }
-
-
-
         public bool Remove(T item)
         {
             int j = 0;
@@ -96,9 +92,6 @@ namespace CreatingTheCustomList
             }
             return removedItem;
         }
-
-
-
         public override string ToString()
         {
             string stringReturn = "";
@@ -115,9 +108,6 @@ namespace CreatingTheCustomList
             }
             return stringReturn;
         }
-
-
-
         public static TheCustomList<T> operator+ (TheCustomList<T> list1, TheCustomList<T> list2)
         {
             TheCustomList<T> combinedList = new TheCustomList<T>();
@@ -150,9 +140,6 @@ namespace CreatingTheCustomList
             }
             return copiedList;
         }
-
-
-
         public TheCustomList<T> ListZipper(TheCustomList<T> list1, TheCustomList<T> list2)
         {
             TheCustomList<T> zippedList = new TheCustomList<T>();
@@ -186,9 +173,6 @@ namespace CreatingTheCustomList
             }
             return zippedList;
         }
-
-
-
         public IEnumerator GetEnumerator()
         {
             TheCustomList<T> fill = new TheCustomList<T>();
